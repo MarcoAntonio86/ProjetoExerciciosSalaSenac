@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+    <h1>Atividade 1</h1>
+    <script>
+        var idade = prompt('Informe a sua idade: ');
+        idade = parseInt(idade);
+
+        if(idade >= 0 && idade <= 15){
+            document.write('Você é um criança');
+        }else if(idade >= 16 && idade <= 30){
+            document.write('Você é um jovem');
+        } else if (idade >= 31 && idade <= 60){
+            document.write('Você é um adulto');
+        } else {
+            document.write('Você é um idoso');
+        }
+    </script>
+</body>
+</html>

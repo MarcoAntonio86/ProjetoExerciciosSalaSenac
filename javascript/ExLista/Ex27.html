@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex27</title>
+    <script>
+        var categoria = prompt('Informe a categoria: ')
+        var salario = prompt('Informe o salário: ')
+        salario = parseInt(salario)
+
+        if(categoria == 'Otimo'){
+            document.write('R$ ' + (salario + (salario * 0.2)))
+        } else if (categoria == 'Bom'){
+            document.write('R$ ' + (salario + (salario * 0.10)))
+        }else{
+            document.write('R$ ' + salario + ' <br> Sem direito a bonificação ')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

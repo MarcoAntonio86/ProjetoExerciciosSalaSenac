@@ -1,0 +1,12 @@
+
+body {
+   background-color: aqua;
+}
+h1 {
+    border: solid 10px greenyellow ;
+    background-color: azure;
+}
+p {
+    border: solid 5px whitesmoke;
+    background-color: rgb(237, 227, 215);
+}
