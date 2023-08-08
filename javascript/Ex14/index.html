@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>A função return vai retornar um valor, não um objeto</h1>
+    <script>
+        function caculearea(largura, altura){
+            //logica
+            var area = largura * altura;    
+            document.write("O terremo possui " + area + " metros quadrados.");
+        }
+
+        var largura = prompt("Informe a largura do terreno: ");
+        var altura = prompt("Informe a altura do terreno: ");
+
+        var area = caculearea(largura, altura);
+
+        document.write("O terreno possui " + area + " metros quadrados.");
+    </script>
+</body>
+</html>

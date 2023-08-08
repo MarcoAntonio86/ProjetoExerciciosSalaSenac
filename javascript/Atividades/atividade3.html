@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade3</title>
+</head>
+<body>
+    <script>
+        var escolha = prompt('Informe a sua escolha,  entre area de um quadrado, triangulo ou circulo: ');
+
+        if(escolha == 'quatrado'){
+            var largura = prompt('Informe a largura do terreno: ');
+            var altura = prompt('Informe a altura do terreno: ');
+            function caculeareaquadrado(largura, altura){
+                var area = largura * altura;
+                document.write("O terreno possui " + area + " metros quadrados.");}
+            }else if(escolha == 'triangulo'){
+                var base = prompt('Informe a base do terreno: ');
+                var altura2 = prompt('Informe a altura do terreno: ');
+                function caculeareatriangulo(base, altura2){
+                    var area2 = base * altura2;
+                    document.write("O terreno possui " + area2 + " metros quadrados.");
+                }}else if (escolha == 'circulo'){
+                    var raio = prompt('Informe o raio do terreno: ');
+                    function caculeareacirculo(raio){
+                        var area3 = 3.14 * raio * raio;
+                        document.write("O terreno possui " + area3 + " metros quadrados.");}
+                    } else {
+                        document.write('Opção inválida');
+                    }
+                
+            
+        
+    </script>
+</body>
+</html>
