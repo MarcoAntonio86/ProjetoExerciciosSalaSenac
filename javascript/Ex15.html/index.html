@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de variaveis</title>
+</head>
+<body>
+    <h1>Escopo de variaveis</h1>
+
+    <script>
+        // escopo, global, bloco, função
+
+        var filmestop = "O Poderoso Chefão"; // var global
+
+        // escopo de bloco
+
+        if(true){
+            var filmesruim = "Wakanda Forever"; // hosting elevação de declaração de variavel o escopo de bloco esta dentro do escopo global
+            document.write(filmestop)
+        }
+
+        document.write(filmesruim)
+
+        document.write('<br/>')
+
+        function x(){
+            
+           var filmesMuitoRuim = 'Homem Aranha: De Volta para Casa';
+           
+           document.write(filmestop);
+           document.write(filmesruim);
+        }
+
+        x()
+        document.write('<br/>');
+        document.write(filmesMuitoRuim)
+    </script>
+</body>
+</html>
