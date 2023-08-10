@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de datas</title>
+</head>
+<body>
+    <script>
+        
+
+        var data1 = new Date(2023, 7, 10);
+
+        var data2 = new Date(2023, 10, 26);
+
+        document.write(data1.toString());
+        document.write("<hr>");
+        document.write(data2.toString());
+
+        // converte as datas 
+        // getTime recupera a data em mlisegundos a partir de 01/janeiro de 1970
+        document.write("<br><br>");
+        document.write("<hr>");
+        document.write(data1.getTime());
+        document.write("<hr>");
+        document.write(data2.getTime());
+        // encontrar a quantidade em milisegundos 
+        document.write('<br><br>');
+        document.write("<hr>");
+        document.write('1 dia tem: '+ (1*24*60*60*1000) + ' milisegundos'); // no parenteses 1 dia, 24 horas, 60 minutos, 60 segundos, 1000 milisegundos
+        document.write('<br><br>');
+        document.write("<hr>");
+        document.write('Faltam: ' + (data2.getTime() - data1.getTime())/ (1*24*60*60*1000) + ' dias para o meu aniversário !!');
+
+
+    </script>
+</body>
+</html>

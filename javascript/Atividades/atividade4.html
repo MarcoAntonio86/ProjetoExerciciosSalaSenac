@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+<body>
+    <h1>Atividade 4 </h1>
+    <script>
+        var n1 = prompt('Informe o primeiro número: ');
+        var n2 = prompt('Informe o segundo número: ');
+         n1 = parseFloat(n1);
+         n2 = parseFloat(n2);
+
+         var operacao = prompt('Informe a operação (soma ou subtração): ');
+
+         var resultado;
+
+         if (operacao == 'soma'){
+            resultado =n1 + n2;
+             document.write("A soma de " + n1 + " + " + n2 + " é: " +  (resultado));
+         } else if (operacao == 'subtração'){ 
+             resultado = n1 - n2;
+             document.write("A subtração de " + n1 + " - " + n2 + " é: " + (resultado));
+          } else {
+             document.write('Operação inválida');
+         }
+    </script>
+</body>
+</html>
