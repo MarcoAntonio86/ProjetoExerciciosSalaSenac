@@ -30,7 +30,7 @@ function verificar(){
             genero = 'Mulher';
             if (idade >=0 && idade < 15) {
                 // criança
-                img.setAttribute('src','imagem/criancaMenina.png');
+                img.setAttribute('src','imagem/criançaMenina.png');
             } else if (idade >= 15 && idade < 25) {
                 // jovem
                 img.setAttribute('src','imagem/jovemMulher.png');

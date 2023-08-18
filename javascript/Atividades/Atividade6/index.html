@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculadora</title>
+        <link rel="stylesheet" href="estilo.css">
+	</head>
+	<body>
+		<h1>Calculadora Senac</h1>
+	<div class="calculadora">
+		<input type="text" id="resultado" readonly />
+		
+		<div class="buttonsOperadores">
+			<button onclick="introducao('+')">+</button>
+			<button onclick="introducao('-')">-</button>
+			<button onclick="introducao('x')">x</button>
+			<button onclick="introducao('÷')">÷</button>
+			<button onclick="introducao('=')">=</button>
+			<button onclick="introducao('.')">.</button>
+			<button onclick="introducao('C')">C</button>
+		</div>
+
+		<div class="buttonsNumeros1">
+			<button onclick="introducao('0')">0</button>
+			<button onclick="introducao('1')">1</button>
+			<button onclick="introducao('2')">2</button>
+			<button onclick="introducao('3')">3</button>
+			<button onclick="introducao('4')">4</button>
+		</div>
+
+		<div class="buttonsNumeros2">
+			<button onclick="introducao('5')">5</button>
+			<button onclick="introducao('6')">6</button>
+			<button onclick="introducao('7')">7</button>
+			<button onclick="introducao('8')">8</button>
+			<button onclick="introducao('9')">9</button>
+		</div>
+    </div>
+	</body>
+</html>
