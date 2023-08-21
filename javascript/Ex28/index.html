@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrey | Incluir | Remover</title>
+</head>
+<body>
+    <h1>Arrey | Incluir | Remover</h1>
+    <script>
+        document.write('<h2>Incluir no final de array</h2>');
+        let listaHeroisDC = ['Batman', '<br>', 'Superman', '<br>', 'Lanterna Verde', '<br>','Asa Noturna', '<br>'];
+        listaHeroisDC.push('Wolverine');
+        document.write(listaHeroisDC);
+        document.write('<hr>');
+
+        document.write('<h2>Incluir no inicio de array</h2>');
+        listaHeroisDC.unshift('Homem Aranha', '<br>');
+        document.write(listaHeroisDC);
+        document.write('<hr>');
+
+        document.write('<h2>Remover no final de array</h2>');
+        listaHeroisDC.pop();
+        document.write(listaHeroisDC);
+        document.write('<hr>');
+
+        document.write('<h2>Remover no inicio de array</h2>');
+        listaHeroisDC.shift();
+        document.write(listaHeroisDC);
+        document.write('<hr>');
+
+
+    </script>
+</body>
+</html>
