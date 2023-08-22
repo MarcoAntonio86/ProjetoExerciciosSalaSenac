@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrey ordenação</title>
+</head>
+<body>
+    <h1>Arrey ordenação</h1>
+    <script>
+        let listaNomes = Array ('Joao', 'Maria', 'Ana', 'Bernado');
+        document.write(listaNomes);
+        document.write('<br>');
+        document.write(listaNomes.sort());
+        document.write('<br>');
+
+        let listaNotas = Array (12, 40, 3, 7, 19, 1);
+        document.write(listaNotas);
+        document.write('<br>');
+        document.write(listaNotas.sort());
+        document.write('<br>');
+
+        function ordenarNumeros(a,b){
+            return a - b
+            // < 0 = a ordenado antes de b
+            // > 0 = b ordenado antes de a
+            // == a ordem é mantida
+        }
+        document.write('<hr>');
+        document.write(listaNotas.sort(ordenarNumeros));
+
+    </script>
+</body>
+</html>

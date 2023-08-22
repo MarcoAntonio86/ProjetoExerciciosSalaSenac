@@ -1,6 +1,6 @@
 var fundo = document.getElementById('fundo');
-fundo.addEventListener('mouseover', sobre);
-fundo.addEventListener('mouseout', fora);
+fundo.addEventListener('focus', sobre);
+fundo.addEventListener('blur', fora);
 
 function sobre(){
     fundo.style.backgroundColor = 'yellow';

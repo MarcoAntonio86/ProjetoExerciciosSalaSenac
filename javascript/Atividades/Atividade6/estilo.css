@@ -6,17 +6,57 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
+  
+    
 }
 
-button{
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: aquamarine;
+
+
+.button{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    
 }
 
 .calculadora{
-    background-color: rgba(136, 29, 236, 0.363);
+    background-color: rgb(175, 158, 158);
+    border-radius: 5px;
+    padding: 100px;
+    
+}
+
+#calcular {
+    display: grid;
+    grid-column: span 4;
+    padding: 5px;
+    
+    
+}
+.calculadora{
+    padding: 10px;
+    
+}
+
+button{
+    font-size: 30px;
+    padding: 10px;
+}
+input{
+    font-size: 20px;
+    
+}
+
+#resultado{
+    padding: 10px;
+}
+#limpar{
+    background-color: red;
+    color: black;
+}
+
+#sinal{
+    background-color: rgba(0, 0, 255, 0.658)
 }
