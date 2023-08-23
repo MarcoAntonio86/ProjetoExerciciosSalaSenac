@@ -7,6 +7,7 @@ body{
     justify-content: center;
     height: 100vh;
   
+  
     
 }
 
@@ -24,7 +25,8 @@ body{
 .calculadora{
     background-color: rgb(175, 158, 158);
     border-radius: 5px;
-    padding: 100px;
+    padding: 20px;
+    
     
 }
 
@@ -34,18 +36,17 @@ body{
     padding: 5px;
     
     
-}
-.calculadora{
-    padding: 10px;
     
 }
 
+
 button{
-    font-size: 30px;
+    font-size: 20px;
     padding: 10px;
 }
 input{
     font-size: 20px;
+   
     
 }
 
@@ -60,3 +61,7 @@ input{
 #sinal{
     background-color: rgba(0, 0, 255, 0.658)
 }
+
+
+
+
