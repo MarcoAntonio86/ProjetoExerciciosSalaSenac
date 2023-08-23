@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>While</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>While</h1>
+    
     <script>
-        let x = 1;
-        while(x <= 10){
+        var x = 11; // para sair só 11, o ideal é começar com 1
+
+        do {
             document.write(x + '<br>');
-            if(x === 5){
-                document.write('X é igual a 5');
-                break;
-            }
-            x++;
-        }
+            //x++; para sair o 11 comentei o contador
+        }while(x <= 10);
     </script>
 </body>
 </html>

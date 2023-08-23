@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For each</title>
+</head>
+<body>
+    <script>
+        // atua somente valores númericos
+
+        var listaVip = ['Maruzam', 'Ana', 'Miguel', 'Joaquim', 'Aparício'];
+
+        document.write(listaVip);
+        document.write('<br>');
+
+        listaVip.forEach(function(valor, indice, array){
+            // lógica
+            document.write('índice: ' + indice + ' valor: ' + valor + '<br>');
+
+            if (valor === 'Joaquim'){
+                array[indice] = 'um novo valor';
+            }
+            
+        })
+        document.write('<br>');
+        document.write(listaVip);
+    </script>
+</body>
+</html>
