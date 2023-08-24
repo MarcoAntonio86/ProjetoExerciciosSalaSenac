@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw</title>
+</head>
+<body>
+    <h1>Throw</h1>
+    <script>
+           let filmes = Array();
+
+            filmes[1] = Array();
+            filme [1]['nome'] = 'Batman: Cavaleiro das Trevas';
+            filme[1]['categoria'] = 'Ação';
+            // throw new Error('Erro INESPERADO');
+
+            function pegarvideo(filmes){
+                // logica
+                try{
+                    document.write(filmes[0]['nome']);
+                    console.log(filmes[0]['nome']);
+                }catch(erro){
+                    document.write('Agora podemos tratar esse erre <br>');
+                    console.log('Agora podemos tratar esse erro');
+                    //document.write(erro);
+                    throw new Error('Erro INESPERADO');
+
+                } finally{
+                    document.write('<br> Sempre passa por aqui (try catch)');
+                    console.log('Sempre passa por aqui (try catch)');
+                }
+                document.write('<br> A aplicação nao morreu');
+                console.log('A aplicacao nao morreu');
+            }
+            pegarvideo(filmes);
+
+    </script>
+</body>
+</html>
