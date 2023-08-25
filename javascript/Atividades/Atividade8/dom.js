@@ -45,21 +45,21 @@ enviar.addEventListener("click", function() {
     var newRow = tabelaResultados.insertRow();
     var alunoCell = newRow.insertCell(0);
     var statusCell = newRow.insertCell(1);
-    var mediaCell = newRow.insertCell(2);// auteração
+    var mediaCell = newRow.insertCell(2);
     alunoCell.innerHTML = nomeAluno;
     statusCell.innerHTML = statusGeral;
-    mediaCell.innerHTML = mediaGeral.toFixed(2);// auteração
+    mediaCell.innerHTML = mediaGeral.toFixed(2);
     
     
     if (statusGeral === "Aprovado") {
         statusCell.style.color = "green";
-        mediaCell.style.color = "green"; // Adicione esta linha
+        mediaCell.style.color = "green"; 
     } else if (statusGeral === "Recuperação") {
         statusCell.style.color = "yellow";
-        mediaCell.style.color = "yellow"; // Adicione esta linha
+        mediaCell.style.color = "yellow"; 
     } else {
         statusCell.style.color = "red";
-        mediaCell.style.color = "red"; // Adicione esta linha
+        mediaCell.style.color = "red"; 
     }
     
     
