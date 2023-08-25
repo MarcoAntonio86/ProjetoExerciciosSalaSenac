@@ -14,7 +14,7 @@ enviar.addEventListener("click", function() {
     var mediaGeral = 0;
     for (let i = 0; i < notas.length; i++) {
         var somaNotas = notas[i].reduce((acc, val) => acc + val, 0);
-        var mediaMateria = (somaNotas / 100) * 100; // Transformando em porcentagem
+        var mediaMateria = (somaNotas / 100) * 100; 
         mediaGeral += mediaMateria;
         
         var status = "";
@@ -45,16 +45,21 @@ enviar.addEventListener("click", function() {
     var newRow = tabelaResultados.insertRow();
     var alunoCell = newRow.insertCell(0);
     var statusCell = newRow.insertCell(1);
+    var mediaCell = newRow.insertCell(2);// auteração
     alunoCell.innerHTML = nomeAluno;
     statusCell.innerHTML = statusGeral;
+    mediaCell.innerHTML = mediaGeral.toFixed(2);// auteração
     
     
     if (statusGeral === "Aprovado") {
         statusCell.style.color = "green";
+        mediaCell.style.color = "green"; // Adicione esta linha
     } else if (statusGeral === "Recuperação") {
         statusCell.style.color = "yellow";
+        mediaCell.style.color = "yellow"; // Adicione esta linha
     } else {
         statusCell.style.color = "red";
+        mediaCell.style.color = "red"; // Adicione esta linha
     }
     
     

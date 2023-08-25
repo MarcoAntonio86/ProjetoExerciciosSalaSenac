@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BOM | WINDOWS</h1>
+    <button onclick="abrirPopUp()">Abrir janela></button>
+    <button onclick="fecharPopUp()">Fechar janela></button>
+    <button onclick="window.print()"> Imprimir Página</button>
+
+    <script>
+        // janela do Browser onde todo o conteúdo é redenrizado window.document oferce acesso aos eleomentos da página
+        // Bom interagir com os recursos do browser
+
+        var janela;
+
+        function abrirPopUp(){
+            janela = window.open('http://www.google.com', 'novaJanela', 'width=200, height=200')
+        }
+        function fecharPopUp(){
+            janela.close()
+        }
+    </script>
+</body>
+</html>
