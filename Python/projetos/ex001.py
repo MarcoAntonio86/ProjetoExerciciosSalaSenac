@@ -10,11 +10,9 @@ for i in range(quantidade_itens_lista):
 
 print(f'A lista de números é {lista_numeros}')
 
-#print('A media é {}'.format(statistics.mean(lista_numeros)))
+print('A media é {}'.format(statistics.mean(lista_numeros)))
 
-numero = numero + numero
 
-print(numero)
     
 
 
