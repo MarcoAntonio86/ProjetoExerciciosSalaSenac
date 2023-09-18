@@ -1,4 +1,5 @@
-tarefas = []
+lista = []
+escolha = 0
 
 menu = ('Menu: \n'
     '1. Adicionar tarefa \n'
@@ -6,21 +7,36 @@ menu = ('Menu: \n'
     '3. Listar tarefas pendentes \n'
     '4. Sair \n')
 
-while True:
+print(menu)
 
-    print(menu)
 
-    escolha = input('Digite o número correspondente à opção desejada: ')
 
-    if escolha == '1':
+while escolha != 4:
+    escolha = int(input('Informe a opção: '))
+    if escolha == 1:
         tarefa = input('Descreva a tarefa: ')
-        tarefas.append(tarefa)
+        lista.append(tarefa)
         print('Tarefa adicionada com sucesso !')
-    
-    elif escolha == '2':
-        if len(tarefas) == 0:
+    elif escolha == 2:
+        if len(lista) == 0:
             print('Não tem tarefas !')
-        
         else:
-            print('Aqui ')
-
+            print(lista)
+            tarefa_removida = input('Informe a tarefa que deseja remover: ')
+            lista.remove(tarefa_removida)
+            print(f"A tarefa '{tarefa_removida}' foi removida com sucesso!")
+            print(lista)
+    elif escolha == 3:
+        if len(lista) == 0:
+            print('Não tem tarefas pendentes.')
+        else:
+            print('Tarefas pendentes:')
+            for i, tarefa in enumerate(lista):
+                print(f"{i+1}. {tarefa}")
+            print()
+    elif escolha == 4:
+        print("Aplicativo encerrado.")
+        break
+    else:
+        print('Opção invalida')
+        
