@@ -28,9 +28,9 @@ while escolha != 4:
             print(lista)
     elif escolha == 3:
         if len(lista) == 0:
-            print('Não tem tarefas pendentes.')
+            print('Não tem produtos cadastrado.')
         else:
-            print('Tarefas pendentes:')
+            print('Produtos cadastrado:')
             for i, produto in enumerate(lista):
                 print(f"{i+1}. {produto}")
             print()
