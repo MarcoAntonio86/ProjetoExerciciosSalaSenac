@@ -1,11 +1,4 @@
-# Inicialize uma tupla de voos disponíveis (cada voo é uma tupla com número do voo, origem, destino, data e preço)
-voos_disponiveis = (
-    ("001", "São Paulo", "Rio de Janeiro", "2023-10-10", 250.00),
-    ("002", "Rio de Janeiro", "Brasília", "2023-10-12", 300.00),
-    ("003", "São Paulo", "Brasília", "2023-10-15", 350.00),
-)
-
-# Inicialize a escolha do usuário como 0
+voos_disponiveis = []  # Lista de voos (tuplas)
 escolha = 0
 
 menu = ('Menu: \n'
@@ -30,23 +23,18 @@ while escolha != 4:
 
     elif escolha == 2:
         numero_voo = input('Informe o número do voo para reservar: ')
-        voo_encontrado = None
         for voo in voos_disponiveis:
             if voo[0] == numero_voo:
-                voo_encontrado = voo
+                voos_disponiveis.remove(voo)
+                print(f'Você reservou o Voo {numero_voo}.')
                 break
-
-        if voo_encontrado:
-            voos_disponiveis = tuple(v for v in voos_disponiveis if v != voo_encontrado)
-            print(f'Você reservou o Voo {numero_voo}.')
         else:
             print(f'Voo {numero_voo} não encontrado.')
 
     elif escolha == 3:
         numero_voo = input('Informe o número do voo para cancelar a reserva: ')
         origem, destino, data, preco = input('Informe origem, destino, data e preço do voo: ').split()
-        novo_voo = (numero_voo, origem, destino, data, float(preco))
-        voos_disponiveis += (novo_voo,)
+        voos_disponiveis.append((numero_voo, origem, destino, data, preco))
         print(f'Reserva para o Voo {numero_voo} cancelada.')
 
     elif escolha == 4:

@@ -1,4 +1,4 @@
-alunos = ()  # Tupla de alunos (cada aluno é uma tupla)
+alunos = []  # Lista de alunos (tuplas)
 escolha = 0
 
 menu = ('Menu: \n'
@@ -14,14 +14,14 @@ while escolha != 4:
     
     if escolha == 1:
         nome_aluno = input('Informe o nome do aluno: ')
-        notas = ()
+        notas = []
         disciplina = input('Informe a disciplina: ')
         while True:
             nota = float(input('Informe a nota (ou digite -1 para parar): '))
             if nota == -1:
                 break
-            notas += (nota,)  # Adiciona a nota à tupla
-        alunos += ((nome_aluno, disciplina, notas),)  # Adiciona uma tupla de aluno à tupla de alunos
+            notas.append(nota)
+        alunos.append((nome_aluno, disciplina, notas))  # Adiciona uma tupla à lista
 
     elif escolha == 2:
         if len(alunos) == 0:
