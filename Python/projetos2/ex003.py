@@ -1,11 +1,11 @@
-# Inicialize uma tupla de voos disponíveis (cada voo é uma tupla com número do voo, origem, destino, data e preço)
+
 voos_disponiveis = (
     ("001", "São Paulo", "Rio de Janeiro", "2023-10-10", 250.00),
     ("002", "Rio de Janeiro", "Brasília", "2023-10-12", 300.00),
     ("003", "São Paulo", "Brasília", "2023-10-15", 350.00),
 )
 
-# Inicialize a escolha do usuário como 0
+
 escolha = 0
 
 menu = ('Menu: \n'

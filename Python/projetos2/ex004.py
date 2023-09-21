@@ -1,11 +1,11 @@
-# Inicialize uma tupla de livros disponíveis (cada livro é uma tupla com título, autor, preço e quantidade)
+
 livros_disponiveis = (
     ("Dom Casmurro", "Machado de Assis", 25.00, 50),
     ("A Moreninha", "Joaquim Manuel de Macedo", 20.00, 30),
     ("Memórias Póstumas de Brás Cubas", "Machado de Assis", 30.00, 40),
 )
 
-# Inicialize a escolha do usuário como 0
+
 escolha = 0
 
 menu = ('Menu: \n'

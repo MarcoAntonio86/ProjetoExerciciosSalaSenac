@@ -15,7 +15,7 @@ while escolha != 4:
         produto = input('Informe o nome do produto a ser cadastrado: ')
         preco = float(input('Informe o preço do produto: '))
         quantidade = int(input('Informe a quantidade do produto: '))
-        produtos += ((produto, preco, quantidade),)  # Usamos uma tupla aninhada para adicionar um novo produto.
+        produtos += ((produto, preco, quantidade),)  
 
     elif escolha == 2:
         if len(produtos) == 0:
@@ -29,7 +29,7 @@ while escolha != 4:
                     encontrou = True
                     print(f"O produto '{produto_removido}' foi removido com sucesso!")
                 else:
-                    novos_produtos += (produto,)  # Recriamos a tupla de produtos sem o produto removido.
+                    novos_produtos += (produto,)  
             if not encontrou:
                 print(f"Produto '{produto_removido}' não encontrado no cadastro.")
             produtos = novos_produtos
