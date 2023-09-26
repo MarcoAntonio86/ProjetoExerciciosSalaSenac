@@ -1,3 +1,6 @@
+
+import os
+os.system('cls')
 def soma(n1, n2):
     return n1 + n2
 
@@ -8,10 +11,10 @@ def multiplicacao(n1, n2):
     return n1 * n2
 
 def divisao(n1, n2):
-    try:
-        return n1 / n2
-    except:
-        print('Operação impossível de realizar')
+    if n2 == 0:
+        print('Não é possível dividir por zero.')
+        return None
+    return n1 / n2
 
 while True:
     n1 = float(input('Informe o primeiro número: '))
@@ -24,16 +27,17 @@ while True:
         else:
             print('Operação inválida')
 
-        if sinal == '+':
-            resultado = soma(n1, n2)
-        elif sinal == '-':
-            resultado = subtracao(n1, n2)
-        elif sinal == '*':
-            resultado = multiplicacao(n1, n2)
-        elif sinal == '/':
-            resultado = divisao(n1, n2)
+    if sinal == '+':
+        resultado = soma(n1, n2)
+    elif sinal == '-':
+        resultado = subtracao(n1, n2)
+    elif sinal == '*':
+        resultado = multiplicacao(n1, n2)
+    elif sinal == '/':
+        resultado = divisao(n1, n2)
 
-    print('O resultado da operação é: {:.2f}'.format(resultado))
+    if resultado is not None:
+        print('O resultado da operação é: {:.2f}'.format(resultado))
 
     pergunta = input('Deseja continuar? [S/N] ').strip().upper()
     if pergunta == 'N':
