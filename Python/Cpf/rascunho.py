@@ -1,10 +1,12 @@
-# primeiro calculo multiplicar os primeiros numeros (9 numeros) de 10 ate 2, soma divide por 11 para dar resto % e faz 11 - resto
-# segundo é quase iqual ao primeiro vou multiplicar os primeiros numeros de 11 ate 2 (o dois sera para o digito discoberto acima), soma divide por 11 para dar resto % e faz 11 - resto
-# se o codigo acima o valor for maior que 9 converte a zero
+
+
+import os
+os.system('cls')
+
 
 cpf = []
 numero = 0
-
+list_cpf = []
 
 def valida_cpf(cpf):
     while len(cpf) < 11:
@@ -12,7 +14,6 @@ def valida_cpf(cpf):
         cpf.append(numero)
         print(cpf)
         
-
 def algoritimo1(cpf):
     num1 = cpf[0] * 10
     num2 = cpf[1] * 9
@@ -35,10 +36,6 @@ def algoritimo1(cpf):
 
     return num10
 
-    
-    
-
-    
 def algoritimo2(cpf):
     num1 = cpf[0] * 11
     num2 = cpf[1] * 10
@@ -49,7 +46,7 @@ def algoritimo2(cpf):
     num7 = cpf[6] * 5
     num8 = cpf[7] * 4
     num9 = cpf[8] * 3
-    num10 = algoritimo1(num10) * 2
+    num10 = algoritimo1(cpf) * 2
     
     soma = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10
     resto = soma % 11
@@ -61,38 +58,35 @@ def algoritimo2(cpf):
     num11 = digito
 
     return num11
-    
-    
-
-    
-
-    
 
 
-def validacao():
-    num10 = algoritimo1()
-    num11 = algoritimo2()
+def validacao(cpf):
+    num10 = algoritimo1(cpf)
+    num11 = algoritimo2(cpf)
 
     if num10 == cpf[9] and num11 == cpf[10]:
-        print('Cpf valido')
+        return True
     else:
-        print('Cpf invalido')
+        return False
+
+
+list_cpf = []  
+
+while True:
+    cpf = []  
+    valida_cpf(cpf)
+    if validacao(cpf):
+        list_cpf.append(cpf)  
+        print('Cpf válido')
+    else:
+        print('Cpf inválido')
+    pergunta = input('Deseja continuar? S/N: ') .strip().upper()
+    if pergunta == 'N':
+        break
+
+print(list_cpf)
 
 
 
 
-
-
-   
-
-valida_cpf(cpf)
-algoritimo1(cpf)
-algoritimo2(cpf)
-validacao()
     
-
-
-
-
-
-
