@@ -4,8 +4,10 @@
          com esses alunos.'''
 
 
+import os
+os.system('cls')
 
-
+import statistics
 
 cadastro = {
     "nomes": [],
@@ -13,6 +15,11 @@ cadastro = {
     "notas2": [],
     "notas3": [],
     "notas4": [],
+}
+
+estatus = {
+    "aprovado": [],
+    "reprovado": [],
 }
 
 while True:
@@ -33,5 +40,30 @@ while True:
  
 
 print(cadastro)
-x = zip(cadastro['nomes'], cadastro['notas1'], cadastro['notas2'], cadastro['notas3'], cadastro['notas4'])
-print(x)
+for nome, nota1, nota2, nota3, nota4 in zip(cadastro['nomes'], cadastro['notas1'], cadastro['notas2'], cadastro['notas3'], cadastro['notas4']):
+    print(f'nomes: {nome}, nota 1: {nota1}, nota 2: {nota2}, nota 3: {nota3}, nota 4: {nota4}')
+
+print("Média de cada aluno:")
+for nome, nota1, nota2, nota3, nota4 in zip(cadastro['nomes'], cadastro['notas1'], cadastro['notas2'], cadastro['notas3'], cadastro['notas4']):
+    notas_aluno = [nota1, nota2, nota3, nota4]
+    media_aluno = statistics.mean(notas_aluno)
+    print(f'Nome: {nome}, Média: {media_aluno}')
+
+todasnotas = cadastro['notas1'] + cadastro['notas2'] + cadastro['notas3'] + cadastro['notas4']
+media = statistics.mean(todasnotas)
+
+print(f'Média geral de todas as notas: {media}')
+
+if media_aluno >= 85:
+    aprovado = nome
+    print(f'Aluno(a) {aprovado} foi aprovado(a)')
+    estatus['aprovado'].append(aprovado)
+    
+else:
+    reprovado = nome
+    print(f'Aluno(a) {reprovado} foi reprovado(a)')
+    estatus['reprovado'].append(reprovado)
+
+print(estatus)
+
+
