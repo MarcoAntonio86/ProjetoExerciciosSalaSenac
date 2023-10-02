@@ -55,15 +55,12 @@ media = statistics.mean(todasnotas)
 print(f'Média geral de todas as notas: {media}')
 
 if media_aluno >= 85:
-    aprovado = nome
-    print(f'Aluno(a) {aprovado} foi aprovado(a)')
-    estatus['aprovado'].append(aprovado)
-    
+    for status in nome:
+        print(f'Aluno(a) {nome} foi aprovado(a)')
 else:
-    reprovado = nome
-    print(f'Aluno(a) {reprovado} foi reprovado(a)')
-    estatus['reprovado'].append(reprovado)
+    for status in nome:
+        print(f'Aluno(a) {nome} foi reprovado(a)')
+    
 
-print(estatus)
 
 
