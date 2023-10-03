@@ -19,15 +19,16 @@ def get_nomes():
     nomes = input("Digite o nome do aluno: ")
     cadastro['nomes'].append(nomes)
 def get_nota():
-    
+    while True:
         nota = input("Digite a nota: ")
-        if nota.isdigit():
-            nota = float(nota)
-            cadastro['nota'].append(nota)
-        else:
+        try:
+           nota = float(nota)
+           cadastro['nota'].append(nota)
+           break
+        except ValueError:
             print('Valor inválido. Por favor, informe um número inteiro.')
 
-            return nota
+           
         
 
 

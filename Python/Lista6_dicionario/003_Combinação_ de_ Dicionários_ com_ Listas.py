@@ -30,11 +30,11 @@ def get_idade():
 def get_nota():
     while True:
         nota = input("Digite a nota: ")
-        if nota.isdigit():
+        try:
             nota = float(nota)
             notas['notas'].append(nota)
             break
-        else:
+        except ValueError:
             print('Valor inválido. Por favor, informe um número.')
             
 
