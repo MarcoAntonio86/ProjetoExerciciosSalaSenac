@@ -6,32 +6,36 @@ separadas.'''
 import os
 os.system('cls')
 
-cadastro = {
-    "nomes": [],
-    "idade": [],
-    "notas": [],
-}
+alunos = {'alunos': []}
+idades = {'idades': []}
+notas = {'notas': []}
+cadastro = {}
 
 def get_nomes():
     nomes = input("Digite o nome do aluno: ")
-    cadastro['nomes'].append(nomes)
+    alunos['alunos'].append(nomes)
 
 def get_idade():
-    idade = input("Digite a idade do aluno: ")
-    if idade.isdigit():
-        idade = int(idade)
-        cadastro['idade'].append(idade)
-    else:
-        print('Valor inválido. Por favor, informe um número inteiro.')
+    while True:
+        idade = input("Digite a idade do aluno: ")
+        if idade.isdigit():
+            idade = int(idade)
+            idades['idades'].append(idade)
+            break  
+        else:
+            print('Valor inválido. Por favor, informe um número inteiro.')
+
 
 
 def get_nota():
+    while True:
         nota = input("Digite a nota: ")
         if nota.isdigit():
             nota = float(nota)
-            cadastro['notas'].append(nota)
+            notas['notas'].append(nota)
+            break
         else:
-            print('Valor inválido. Por favor, informe um número inteiro.')
+            print('Valor inválido. Por favor, informe um número.')
             
 
 while True:
@@ -43,5 +47,15 @@ while True:
         break
 
 
-for nome, idade, nota in zip(cadastro['nomes'], cadastro['idade'], cadastro['notas']):
-    print(f'Nome do aluno: {nome}, \n sua idade: {idade}, \n suas nota: {nota}')
+'''for nome, idade, nota in zip(cadastro['nomes'], cadastro['idade'], cadastro['notas']):
+    print(f'Nome do aluno: {nome}, \n sua idade: {idade}, \n suas nota: {nota}')'''
+
+print(f'Alunos: {alunos}')
+print(f'Idades: {idades}')
+print(f'Notas: {notas}')
+
+cadastro.update(alunos)
+cadastro.update(idades)
+cadastro.update(notas)
+
+print(cadastro)
