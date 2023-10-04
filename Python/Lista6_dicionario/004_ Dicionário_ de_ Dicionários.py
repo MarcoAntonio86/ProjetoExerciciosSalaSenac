@@ -40,7 +40,7 @@ while True:
     aluno = get_aluno()
     alunos[aluno['nome']] = aluno  # Usando o nome como chave do dicionário
     pergunta = input("Deseja adicionar mais um aluno? [S/N] ").strip().upper()
-    if pergunta != 'S':
+    if pergunta != 'N':
         break
 
 print("O cadastro ficou:")

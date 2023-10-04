@@ -1,4 +1,12 @@
-lista = {}
+'''Crie um programa que permita aos usuários gerenciarem uma lista de tarefas. Os 
+usuários devem poder adicionar, listar e marcar tarefas como concluídas. Use um 
+dicionário onde as chaves são as tarefas e os valores indicam se a tarefa foi concluída 
+ou não.'''
+
+import os
+os.system('cls')
+
+lista = {'tarefas': [], 'concluidas': []}
 escolha = 0
 
 menu = ('Menu: \n'
@@ -15,7 +23,7 @@ while escolha != 4:
     escolha = int(input('Informe a opção: '))
     if escolha == 1:
         tarefa = input('Descreva a tarefa: ')
-        lista.append(tarefa)
+        lista['tarefas'].append(tarefa)
         print('Tarefa adicionada com sucesso !')
     elif escolha == 2:
         if len(lista) == 0:
@@ -23,7 +31,7 @@ while escolha != 4:
         else:
             print(lista)
             tarefa_removida = input('Informe a tarefa que deseja remover: ')
-            lista.remove(tarefa_removida)
+            lista['tarefas'].remove(tarefa_removida)
             print(f"A tarefa '{tarefa_removida}' foi removida com sucesso!")
             print(lista)
     elif escolha == 3:
@@ -31,7 +39,7 @@ while escolha != 4:
             print('Não tem tarefas pendentes.')
         else:
             print('Tarefas pendentes:')
-            for i, tarefa in enumerate(lista):
+            for i, tarefa in enumerate(lista['tarefas']):
                 print(f"{i+1}. {tarefa}")
             print()
     elif escolha == 4:
