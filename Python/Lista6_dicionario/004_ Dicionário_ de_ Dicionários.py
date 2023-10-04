@@ -7,56 +7,42 @@ os.system('cls')
 
 
 
-nomes = {
-    'alunos': [],
-}
+alunos = {}
 
-cadastro = {
-    'idades': [],
-    'notas': [],
-}
-
-def get_nomes():
+def get_aluno():
     nome = input("Digite o nome do aluno: ")
-    nomes['alunos'].append(nome)
 
-def get_idade():
     while True:
         idade = input("Digite a idade do aluno: ")
-        if idade.isdigit():
-            idade = int(idade)
-            cadastro['idades'].append(idade)
-            break  
-        else:
-            print('Valor inválido. Por favor, informe um número inteiro.')
-
-
-
-def get_nota():
-    
-     while True:
-        nota = input("Digite a nota: ")
         try:
-            nota = float(nota)
-            cadastro['notas'].append(nota)
+            idade = int(idade)
             break
         except ValueError:
             print('Valor inválido. Por favor, informe um número.')
-            
+
+    while True:
+        nota = input("Digite a nota do aluno: ")
+        try:
+            nota = float(nota)
+            break
+        except ValueError:
+            print('Valor inválido. Por favor, informe um número.')
+
+    aluno = {
+        'nome': nome,
+        'idade': idade,
+        'nota': nota
+    }
+
+    return aluno
 
 while True:
-    get_nomes()
-    get_idade()
-    get_nota()
+    aluno = get_aluno()
+    alunos[aluno['nome']] = aluno  # Usando o nome como chave do dicionário
     pergunta = input("Deseja adicionar mais um aluno? [S/N] ").strip().upper()
-    if pergunta == 'N':
+    if pergunta != 'S':
         break
 
-    
-    
-print(f'Nome do aluno: {nomes}')
-print(f'Idade e nota do aluno: {cadastro}')
-
-nomes.update(cadastro)
-
-print(cadastro)
+print("O cadastro ficou:")
+for nome, dados in alunos.items():
+    print(f'Nome: {dados["nome"]}, Idade: {dados["idade"]}, Nota: {dados["nota"]}')
