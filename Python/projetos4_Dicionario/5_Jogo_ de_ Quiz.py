@@ -95,34 +95,34 @@ def pergunta_10():
 while c < 5:
     opcao = input('Escolha perguntas de a a j, lembre-se você só pode escolher até 5 perguntas: ').strip().upper()
     if opcao == 'A':
-        escolha['resposta'] = pergunta_1()
+        escolha['A'] = pergunta_1()
         
     elif opcao == 'B':
-        escolha['resposta'] = pergunta_2()
+        escolha['B'] = pergunta_2()
     
     elif opcao == 'C':
-        escolha['resposta'] = pergunta_3()
+        escolha['C'] = pergunta_3()
         
     elif opcao == 'D':
-        escolha['resposta'] = pergunta_4()
+        escolha['D'] = pergunta_4()
     
     elif opcao == 'E':
-        escolha['resposta'] = pergunta_5()
+        escolha['E'] = pergunta_5()
         
     elif opcao == 'F':
-         escolha['resposta'] = pergunta_6()
+         escolha['F'] = pergunta_6()
 
     elif opcao == 'G':
-        escolha['resposta'] = pergunta_7()
+        escolha['G'] = pergunta_7()
         
     elif opcao == 'H':
-        escolha['resposta'] = pergunta_8()
+        escolha['H'] = pergunta_8()
     
     elif opcao == 'I':
-        escolha['resposta'] = pergunta_9()
+        escolha['I'] = pergunta_9()
         
     elif opcao == 'J':
-        escolha['resposta'] = pergunta_10()
+        escolha['J'] = pergunta_10()
     
     else:
         print('Opção invalida')
