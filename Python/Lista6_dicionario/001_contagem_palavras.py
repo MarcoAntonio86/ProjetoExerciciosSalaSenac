@@ -40,7 +40,7 @@ def get_nota():
     return aprovados'''
 
 def aprova():
-    notas_alunos = cadastro['notas']
+    notas_alunos = cadastro['nota']
     for nome, nota in zip(cadastro['nomes'], notas_alunos):
         if nota >= 85:
             aprovados.append(nome)

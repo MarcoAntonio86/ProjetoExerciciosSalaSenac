@@ -13,7 +13,8 @@ menu = ('Menu: \n'
     '1. Adicionar tarefa \n'
     '2. Remover tarefa \n'
     '3. Listar tarefas pendentes \n'
-    '4. Sair \n')
+    '4. Listar tarefas concluídas \n'
+    '5. Sair \n')
 
 print(menu)
 
@@ -43,8 +44,18 @@ while escolha != 4:
                 print(f"{i+1}. {tarefa}")
             print()
     elif escolha == 4:
+        print(lista)
+        tarefa_concluida = input('Informe a tarefa que deseja concluir: ')
+        lista['concluidas'].append(tarefa_concluida)
+        print(f"A tarefa '{tarefa_concluida}' foi concluir com sucesso!")
+        print(lista['concluidas'])
+        
+    elif escolha == 5:
         print("Aplicativo encerrado.")
         break
     else:
         print('Opção invalida')
+        
+
+        
         
