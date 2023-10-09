@@ -1,7 +1,7 @@
 from tkinter import *
 import random
 
-# Função para verificar o chute do jogador
+
 def verificar_chute():
     global acertos, limite
     chute = chute_entry.get()
@@ -24,18 +24,18 @@ def verificar_chute():
         chute_entry.config(state='disabled')
         botao_verificar.config(state='disabled')
 
-# Configuração inicial
+
 acertos = 0
 palavras = ['marco', 'antonio', 'braga', 'lima']
 
 
 
-# Criação da janela
+
 janela = Tk()
 janela.title('Jogo de Adivinhação de Palavras')
 janela.geometry('400x300')
 
-# Elementos da interface gráfica
+
 texto_orientacao = Label(janela, text=f'Bem-vindo(a)! Tente adivinhar a palavra:')
 texto_orientacao.pack(padx=10, pady=10)
 
@@ -48,9 +48,9 @@ botao_verificar.pack(padx=10, pady=10)
 resultado_label = Label(janela, text='')
 resultado_label.pack(padx=10, pady=10)
 
-# Variáveis do jogo
+
 palavra_sorteada = random.choice(palavras)
 limite = 10
 
-# Inicializa a janela principal
+
 janela.mainloop()
