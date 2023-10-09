@@ -16,6 +16,8 @@ chute = ''
 limite = 10
 
 
+
+
 while limite > 0 and acertos != len(palavra_sorteada): # pode se usar no lugar no diferente (!=) o sinal de menor
     chute = input('Informe a letra: ')
     if chute in palavra_sorteada:
