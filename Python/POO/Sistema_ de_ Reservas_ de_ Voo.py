@@ -41,25 +41,25 @@ class Passageiro:
         return self.nome
 
 
-# Exemplo de uso do sistema de reservas de voo:
 
-# Criação de voos
+
+
 voo1 = Voo("AA101", 100)
 voo2 = Voo("BA202", 150)
 
-# Criação de passageiros
+
 passageiro1 = Passageiro("Alice")
 passageiro2 = Passageiro("Bob")
 
-# Reservas
-print(voo1.reservar_voo(passageiro1))  # Reserva confirmada para o voo AA101 para Alice.
-print(voo1.reservar_voo(passageiro2))  # Reserva confirmada para o voo AA101 para Bob.
-print(voo2.reservar_voo(passageiro1))  # Desculpe, não há mais assentos disponíveis no voo BA202.
 
-# Cancelar reserva
-print(voo1.cancelar_reserva(passageiro2))  # Reserva cancelada para o voo AA101 de Bob.
+print(voo1.reservar_voo(passageiro1))  
+print(voo1.reservar_voo(passageiro2))  
+print(voo2.reservar_voo(passageiro1))  
 
-# Informações do passageiro
-print(voo1.informacoes_passageiro(passageiro1))  # Informações do voo AA101 para Alice.
-print(voo1.informacoes_passageiro(passageiro2))  # Bob não tem uma reserva no voo AA101.
+
+print(voo1.cancelar_reserva(passageiro2))  
+
+
+print(voo1.informacoes_passageiro(passageiro1))  
+print(voo1.informacoes_passageiro(passageiro2))  
 
